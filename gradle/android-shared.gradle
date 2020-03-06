@@ -1,0 +1,10 @@
+android {
+    compileSdkVersion general.android.sdk.compile
+
+    defaultConfig {
+        minSdkVersion general.android.sdk.min
+        targetSdkVersion general.android.sdk.target
+        versionCode general.version.code
+        versionName project.version
+    }
+}
