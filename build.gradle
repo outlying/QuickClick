@@ -53,6 +53,9 @@ task assemble() {}
 
 /**
  * Update Travis file
+ *
+ * This will ensure that Travis file has up to date configuration that will match
+ * project settings
  */
 import org.apache.tools.ant.filters.ReplaceTokens
 
