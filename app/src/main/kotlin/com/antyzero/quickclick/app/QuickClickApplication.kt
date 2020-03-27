@@ -6,7 +6,5 @@ class QuickClickApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-
-
     }
 }

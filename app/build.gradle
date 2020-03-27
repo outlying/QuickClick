@@ -19,7 +19,14 @@ dependencies {
 
     implementation project(':app-viewmodel')
 
+    // Standard testing
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    // Navigation component
+    implementation "androidx.navigation:navigation-fragment-ktx:${versions.androidx.navigation}"
+    implementation "androidx.navigation:navigation-ui-ktx:${versions.androidx.navigation}"
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:${versions.androidx.navigation}"
+    androidTestImplementation "androidx.navigation:navigation-testing:${versions.androidx.navigation}"
 }
