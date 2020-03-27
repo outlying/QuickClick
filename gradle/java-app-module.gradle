@@ -1,9 +1,6 @@
 apply plugin: 'java-library'
 apply plugin: 'kotlin'
+apply from: rootProject.file("gradle/dependencies-kotlin-shared.gradle")
 
 sourceCompatibility = "7"
 targetCompatibility = "7"
-
-dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}"
-}

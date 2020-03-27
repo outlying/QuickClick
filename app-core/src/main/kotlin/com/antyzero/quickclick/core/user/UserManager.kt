@@ -5,6 +5,6 @@ class UserManager(
 ) {
 
     fun getUser() : User {
-        return User.Anonymous
+        return User.Anonymous(userIdGenerator.generate())
     }
 }

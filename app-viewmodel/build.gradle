@@ -1,7 +1,4 @@
-apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
-apply from: rootProject.file("gradle/android-shared.gradle")
+apply from: rootProject.file("gradle/android-library.gradle")
 
 android {
 
@@ -20,9 +17,8 @@ android {
 
 dependencies {
 
-    api project(':app-core')
+    api project(':app-usecase')
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}"
     //implementation "androidx.appcompat:appcompat:${versions.androidx.appcompat}"
     //implementation "androidx.core:core-ktx:${versions.androidx.core}"
 

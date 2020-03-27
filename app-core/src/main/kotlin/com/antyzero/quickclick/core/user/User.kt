@@ -1,6 +1,6 @@
 package com.antyzero.quickclick.core.user
 
-sealed class User {
+sealed class User(val id: String) {
 
-    object Anonymous : User()
+    class Anonymous(id: String) : User(id)
 }

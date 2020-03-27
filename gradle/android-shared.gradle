@@ -1,5 +1,11 @@
+/**
+ * Common configuration for Android modules
+ */
+
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply from: rootProject.file("gradle/dependencies-kotlin-shared.gradle")
+apply from: rootProject.file("gradle/dependencies-android-shared.gradle")
 
 android {
 

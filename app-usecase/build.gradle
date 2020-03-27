@@ -1,1 +1,5 @@
 apply from: rootProject.file("gradle/java-app-module.gradle")
+
+dependencies {
+    api project(':app-core')
+}
