@@ -20,7 +20,7 @@ android {
 
 dependencies {
 
-    api project(':viewmodels')
+    api project(':code-ui')
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}"
     implementation "androidx.appcompat:appcompat:${versions.androidx.appcompat}"
