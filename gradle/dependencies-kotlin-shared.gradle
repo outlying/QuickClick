@@ -1,5 +1,7 @@
 /**
- * Commonly shared dependencies across whole project
+ * Commonly shared Kotlin dependencies across whole project
+ *
+ * Must work both in standard Java modules and Android modules
  */
 
 dependencies {
