@@ -46,6 +46,12 @@ allprojects {
 }
 
 /**
+ * Empty task assemble to trigger root jobs during normal builds
+ */
+
+task assemble() {}
+
+/**
  * Update Travis file
  */
 import org.apache.tools.ant.filters.ReplaceTokens
@@ -57,6 +63,8 @@ task updateTravisYml(type: Copy) {
             ANDROID_SDK_COMPILE: general.android.sdk.compile.toString()
     ])
 }
+
+tasks.assemble.dependsOn("updateTravisYml")
 
 /**
  * Removes build dir from root
