@@ -45,6 +45,22 @@ allprojects {
     }
 }
 
+/**
+ * Update Travis file
+ */
+import org.apache.tools.ant.filters.ReplaceTokens
+
+task updateTravisYml(type: Copy) {
+    from 'dev/travis/.travis.yml'
+    into '.'
+    filter(ReplaceTokens, tokens: [
+            ANDROID_SDK_COMPILE: general.android.sdk.compile.toString()
+    ])
+}
+
+/**
+ * Removes build dir from root
+ */
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
