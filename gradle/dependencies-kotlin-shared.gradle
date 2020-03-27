@@ -1,0 +1,7 @@
+/**
+ * Commonly shared dependencies across whole project
+ */
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}"
+}
