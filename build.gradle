@@ -52,6 +52,13 @@ allprojects {
 task assemble() {}
 
 /**
+ * Removes build dir from root
+ */
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+/**
  * Update Travis file
  *
  * This will ensure that Travis file has up to date configuration that will match
@@ -68,10 +75,4 @@ task updateTravisYml(type: Copy) {
 }
 
 tasks.assemble.dependsOn("updateTravisYml")
-
-/**
- * Removes build dir from root
- */
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}
+tasks.clean.dependsOn("updateTravisYml")
