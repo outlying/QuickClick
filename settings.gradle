@@ -1,2 +1,2 @@
-include ':core', ':viewmodels', ':usecase', ':app'
+include ':app-core', ':app-viewmodels', ':app-usecase', ':app'
 rootProject.name='Quick Click'

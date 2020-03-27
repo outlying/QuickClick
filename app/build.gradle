@@ -1,7 +1,4 @@
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
-apply from: rootProject.file("gradle/android-shared.gradle")
+apply from: rootProject.file("gradle/android-app.gradle")
 
 android {
 
@@ -20,7 +17,7 @@ android {
 
 dependencies {
 
-    api project(':viewmodels')
+    api project(':app-viewmodels')
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}"
     implementation "androidx.appcompat:appcompat:${versions.androidx.appcompat}"
