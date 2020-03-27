@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply from: rootProject.file("gradle/android-shared.gradle")
@@ -6,7 +6,7 @@ apply from: rootProject.file("gradle/android-shared.gradle")
 android {
 
     defaultConfig {
-        applicationId "com.antyzero.quickclick"
+        consumerProguardFiles 'consumer-rules.pro'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -20,11 +20,11 @@ android {
 
 dependencies {
 
-    api project(':viewmodels')
+    api project(':core')
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}"
-    implementation "androidx.appcompat:appcompat:${versions.androidx.appcompat}"
-    implementation "androidx.core:core-ktx:${versions.androidx.core}"
+    //implementation "androidx.appcompat:appcompat:${versions.androidx.appcompat}"
+    //implementation "androidx.core:core-ktx:${versions.androidx.core}"
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
