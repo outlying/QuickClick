@@ -17,7 +17,7 @@ android {
 
 dependencies {
 
-    api project(':app-viewmodels')
+    api project(':app-viewmodel')
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}"
     implementation "androidx.appcompat:appcompat:${versions.androidx.appcompat}"
